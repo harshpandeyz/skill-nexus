@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.skillnexus">
+
+    <!-- Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SkillNexus">
+
+        <!-- ✅ Add android:exported="true" here -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other activities don't need exported if they don't have intent-filter -->
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".SkillMatchActivity" />
+
+    </application>
+
+</manifest>
